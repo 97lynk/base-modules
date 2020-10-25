@@ -15,3 +15,5 @@ security:
                 key-store-password: 'pAss'
 server:
     port: 8082
+navigator:
+    packageToScan: 'io.a97lynk*'

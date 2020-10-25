@@ -10,3 +10,5 @@ security:
         resource:
             jwt:
                 key-uri: http://localhost:7070/oauth/token_key
+navigator:
+    packageToScan: 'io.a97lynk*'

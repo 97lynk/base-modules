@@ -6,6 +6,7 @@ import org.hibernate.cfg.Environment;
 import org.hibernate.context.spi.CurrentTenantIdentifierResolver;
 import org.hibernate.dialect.PostgreSQL95Dialect;
 import org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,7 +33,8 @@ public class HibernateConfig {
             DataSource dataSource,
             JpaProperties jpaProperties,
             MultiTenantConnectionProvider multiTenantConnectionProviderImpl,
-            CurrentTenantIdentifierResolver currentTenantIdentifierResolverImpl
+            CurrentTenantIdentifierResolver currentTenantIdentifierResolverImpl,
+            @Value("${navigator.packageToScan}") String packageToScan
     ) {
 
         Map<String, Object> jpaPropertiesMap = new HashMap<>(jpaProperties.getProperties());
@@ -45,7 +47,7 @@ public class HibernateConfig {
 
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
-        em.setPackagesToScan("io.a97lynk*");
+        em.setPackagesToScan(packageToScan);
         em.setJpaVendorAdapter(jpaVendorAdapter());
         em.setJpaPropertyMap(jpaPropertiesMap);
         return em;
