@@ -6,7 +6,7 @@ For more information, see "[Security Guard docs](https://97lynk.github.io/base-m
 Add dependency in `pom.xml` file follow [Release package](https://github.com/97lynk/base-modules/packages/472267)
 
 Security Guard using asymmetric encryption so must to config java key store:
-```
+```yml
 security:
     oauth2:
         resource:
@@ -17,7 +17,7 @@ security:
                 key-store-password: <password of alias>
 ```
 or public key url:
-```
+```yml
 security:
     oauth2:
         resource:
