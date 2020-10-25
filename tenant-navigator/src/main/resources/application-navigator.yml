@@ -1,0 +1,12 @@
+spring:
+    datasource:
+        password: awhjw
+        username: postgres
+        url: jdbc:postgresql://localhost:5432/course_dev?createDatabaseIfNotExist=true&useSSL=false
+        jpa.hibernate.ddl-auto: update
+
+security:
+    oauth2:
+        resource:
+            jwt:
+                key-uri: http://localhost:7070/oauth/token_key

@@ -1,0 +1,17 @@
+spring:
+    datasource:
+        password: awhjw
+        username: postgres
+        url: jdbc:postgresql://localhost:5432/course_dev?createDatabaseIfNotExist=true&useSSL=false
+        jpa.hibernate.ddl-auto: update
+
+security:
+    oauth2:
+        resource:
+            jwt:
+                key-store: classpath:/key-for-jwt.jks
+                key-password: 'P@ss'
+                key-alias: 'aliasname'
+                key-store-password: 'pAss'
+server:
+    port: 8082
