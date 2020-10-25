@@ -1,0 +1,7 @@
+io.a97lynk.base
+io.a97lynk.base.controller
+io.a97lynk.base.controller.impl
+io.a97lynk.base.exception
+io.a97lynk.base.jpa
+io.a97lynk.base.service
+io.a97lynk.base.service.impl
