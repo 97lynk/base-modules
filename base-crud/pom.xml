@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.a97lynk</groupId>
     <artifactId>base</artifactId>
-    <version>1.0.1-RELEASE</version>
+    <version>1.0.2-RELEASE</version>
     <name>base</name>
     <description>Base CRUD for spring boot project</description>
 
